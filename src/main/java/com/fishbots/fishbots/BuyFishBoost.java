@@ -9,7 +9,7 @@ public class BuyFishBoost {
 
     private static long lastExecutionTime = System.currentTimeMillis();
 
-    private static final long INTERVAL_MS =  60 * 60 * 1000;
+    private static final long INTERVAL_MS =  70 * 60 * 1000;
 
     private static int taskState = 0;
     private static int waitTicks = 0;
