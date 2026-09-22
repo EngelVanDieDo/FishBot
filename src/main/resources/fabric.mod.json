@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "fishbots",
+  "version": "${version}",
+  "name": "fishbots",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/fishbots/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.fishbots.fishbots.client.FishbotsClient"
+    ]
+  },
+  "mixins": [
+    "fishbots.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

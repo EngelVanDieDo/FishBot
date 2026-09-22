@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.fishbots.fishbots.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TitleS2CPacketMixin",
+    "PlayerInventoryAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
