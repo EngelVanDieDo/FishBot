@@ -23,12 +23,10 @@ public class Fishbots {
     public static boolean isBotActive = false;
     public static boolean isMinigameActive = false;
 
-    // BUNLARA STATIC EKLENDİ (Diğer sınıftan init() çağırılabilmesi için)
     private static int waitTimer = 0;
     private static int botState = 0;
     private static int minigameTimeoutTimer = 0;
 
-    // BURAYA DA STATIC EKLENDİ
     public static void init() {
         KeyBinding.Category fishbotsCategory = KeyBinding.Category.create(Identifier.of("fishbots", "category"));
 

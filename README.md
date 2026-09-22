@@ -16,7 +16,7 @@ Bot, tek bir ana başlatıcı üzerinden 4 farklı bağımsız modül ile çalı
 
 \* \*\*🐟 Gelişmiş Balık Botu:\*\* Suya atılan oltayı takip eder, balık vurduğunda otomatik çeker. Çoklu olta kullanımı ve Mending (Tamir) büyüsü için otomatik XP şişesi fırlatma modlarına sahiptir.
 
-\* \*\*🌻 Çiçek (Mevsim) Otomasyonu:\*\* Her 60 dakikada bir arka planda `/mevsim depo` komutunu çalıştırır ve 51. slota tıklayarak çiçekleri otomatik satar.
+\* \*\*🌻 Çiçek (Mevsim) Otomasyonu:\*\* Her 53 dakikada bir arka planda `/mevsim depo` komutunu çalıştırır ve 51. slota tıklayarak çiçekleri otomatik satar.
 
 \* \*\*🌾 Çiftçi Otomasyonu:\*\* Çakışmaları önlemek için her 47 dakikada bir `/çiftçi` komutunu çalıştırır. Sayfalar arası geçiş yaparak (Shift+Sağ Tık / QUICK\_MOVE) eşyaları oyuncunun üzerine çeker. Menü gecikmelerine karşı sunucu senkronizasyon koruması içerir.
 

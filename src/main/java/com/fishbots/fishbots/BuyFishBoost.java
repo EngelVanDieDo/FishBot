@@ -9,7 +9,6 @@ public class BuyFishBoost {
 
     private static long lastExecutionTime = System.currentTimeMillis();
 
-    // TEST İÇİN 10 SANİYE (Hemen test edebilmen için. Çalıştığını görünce 60 * 60 * 1000 yaparsın)
     private static final long INTERVAL_MS =  60 * 60 * 1000;
 
     private static int taskState = 0;

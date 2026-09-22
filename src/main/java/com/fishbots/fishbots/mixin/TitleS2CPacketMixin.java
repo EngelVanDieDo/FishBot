@@ -205,7 +205,6 @@ public class TitleS2CPacketMixin {
                 FishBotLogger.log("[Mixin] Dümdüz Balık (Mod 3), kilit açılıyor.");
                 Fishbots.isMinigameActive = false; // KİLİDİ AÇ
             }
-            // NOT: Artık Mixin olta fırlatmıyor. Kilidi açıyor, Fishbots Ana Beyin oltayı kendisi atıyor.
         });
     }
 }

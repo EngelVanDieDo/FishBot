@@ -48,26 +48,22 @@ public class FarmerCollector {
                     break;
 
                 case 1:
-                    // 2. MENÜNÜN GELMESİNİ BEKLE VE 1. SAYFAYI TOPLA
                     if (isChestMenuOpen(client)) {
                         FishBotLogger.log("[FarmerCollector] Çiftçi menüsü doğrulandı. 1. Sayfa toplanıyor...");
                         int syncId = client.player.currentScreenHandler.syncId;
 
-                        // 1. Sayfa Eşyaları (Shift + Sağ Tık = 1)
                         client.interactionManager.clickSlot(syncId, 20, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 24, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 34, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 37, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 38, 1, SlotActionType.QUICK_MOVE, client.player);
 
-                        // 2. Sayfaya Geç (Slot 53) -> Bu normal sol tık kalmalı (0 ve PICKUP)
                         FishBotLogger.log("[FarmerCollector] 2. Sayfaya geçiliyor...");
                         client.interactionManager.clickSlot(syncId, 53, 0, SlotActionType.PICKUP, client.player);
 
                         taskState = 2;
                         waitTicks = 20; // Sunucunun 2. sayfayı yüklemesi için 1 saniye bekle
                     } else {
-                        // Menü henüz açılmadıysa 3 saniye (60 tick) boyunca beklemeyi dene
                         menuWaitTimeout++;
                         if (menuWaitTimeout > 60) {
                             FishBotLogger.log("[FarmerCollector] HATA: Menü 3 saniye içinde açılmadı, işlem iptal edildi.");
@@ -85,7 +81,6 @@ public class FarmerCollector {
                         FishBotLogger.log("[FarmerCollector] 2. Sayfa toplanıyor...");
                         int syncId = client.player.currentScreenHandler.syncId;
 
-                        // 2. Sayfa Eşyaları (Shift + Sağ Tık = 1)
                         client.interactionManager.clickSlot(syncId, 14, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 15, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 16, 1, SlotActionType.QUICK_MOVE, client.player);
@@ -94,7 +89,6 @@ public class FarmerCollector {
                         client.interactionManager.clickSlot(syncId, 31, 1, SlotActionType.QUICK_MOVE, client.player);
                         client.interactionManager.clickSlot(syncId, 39, 1, SlotActionType.QUICK_MOVE, client.player);
 
-                        // 3. Sayfaya Geç (Slot 53) -> Bu normal sol tık kalmalı
                         FishBotLogger.log("[FarmerCollector] 3. Sayfaya geçiliyor...");
                         client.interactionManager.clickSlot(syncId, 53, 0, SlotActionType.PICKUP, client.player);
 
@@ -107,7 +101,6 @@ public class FarmerCollector {
                     break;
 
                 case 3:
-                    // 4. SAYFA 3'Ü TOPLA
                     if (isChestMenuOpen(client)) {
                         FishBotLogger.log("[FarmerCollector] 3. Sayfa toplanıyor...");
                         int syncId = client.player.currentScreenHandler.syncId;

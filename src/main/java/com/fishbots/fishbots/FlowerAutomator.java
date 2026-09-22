@@ -7,8 +7,7 @@ import net.minecraft.screen.slot.SlotActionType;
 public class FlowerAutomator {
     private static long lastExecutionTime = System.currentTimeMillis();
 
-    // TEST İÇİN 10 SANİYE (Hemen test edebilmen için. Çalıştığını görünce 60 * 60 * 1000 yaparsın)
-    private static final long INTERVAL_MS =  53 * 60 * 1000;
+    private static final long INTERVAL_MS =  53 * 60 * 1000;// 53 Dakika
 
     private static int taskState = 0;
     private static int waitTicks = 0;
