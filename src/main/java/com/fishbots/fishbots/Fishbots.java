@@ -19,6 +19,7 @@ import org.lwjgl.glfw.GLFW;
 public class Fishbots {
     private static KeyBinding toggleBotKey;
     private static KeyBinding modeSwitchKey;
+    private static KeyBinding dirtBotKey;
 
     public static boolean isBotActive = false;
     public static boolean isMinigameActive = false;
@@ -36,7 +37,13 @@ public class Fishbots {
                 GLFW.GLFW_KEY_R,
                 fishbotsCategory
         ));
-
+        // DirtBot için T tuşunu (Bağımsız) kaydediyoruz
+        dirtBotKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "Toprak Botu (Aç/Kapat)",
+                InputUtil.Type.KEYSYM,
+                org.lwjgl.glfw.GLFW.GLFW_KEY_H, // H tuşuna atandı
+                fishbotsCategory
+        ));
         modeSwitchKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Modu Değiştir",
                 InputUtil.Type.KEYSYM,
@@ -106,6 +113,11 @@ public class Fishbots {
                 }
             }
 
+            // 3. DirtBot
+            while (dirtBotKey.wasPressed()) {
+                DirtBot.toggle(client);
+            }
+            DirtBot.tick(client);
             if (!isBotActive || client.player == null || client.interactionManager == null) return;
 
             if (isMinigameActive) {
@@ -186,7 +198,7 @@ public class Fishbots {
         if (!mainStack.isOf(Items.FISHING_ROD)) return false;
 
         double durability = getDurabilityPercentage(mainStack);
-        if (durability >= 0.90) return false;
+        if (durability >= 0.80) return false;
 
         FishBotLogger.log("[Mod 1] Olta canı %" + (int)(durability * 100) + ". XP aranıyor...");
 
