@@ -15,7 +15,7 @@ Bot, bağımsız çalışan 5 farklı modül ile tam otomasyon sağlar:
 ## ⚙️ Gereksinimler
 
 * Minecraft **1.21.11**
-* Fabric Loader (0.19.5+)
+* Fabric Loader (0.19.2+)
 * Java 21
 
 ## 🎮 Kullanım (Kontroller)
